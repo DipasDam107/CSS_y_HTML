@@ -1,0 +1,481 @@
+<html>
+	<head>
+		<style type="text/css">
+
+  		.fondo {
+    		background-color: rgb(192,192,192); 
+			}
+		.fuente{
+			font-family:"Arial";
+			}
+
+		.textoalto{
+		  vertical-align:text-top;
+		}
+		.centro{
+			position:relative;
+			left:320px;
+		}	
+		h1 {
+			font-family:"Arial";
+			font-size:250%;
+			position:relative;
+			left:200px; 
+		}
+
+		h2{
+			font-family:"Arial";
+			font-size:150%;
+			text-align: center
+		}
+
+		.azulito{
+			color:rgb(31,1,184);
+		}
+
+		h4{
+			font-family:"Arial";
+			font-size:100%;
+			color:rgb(255,0,0);
+		}
+
+		.separacion{
+			padding-top: 20px;
+		}
+
+		.derecha{
+			text-align:right;
+		}
+
+
+		
+
+  		</style>
+	</head>
+	
+	<body>
+		<h1>Formulario Personal</h1>
+		<form action="mailto:DanielDipas11@hotmail.com" method="post" enctype="multipart/form-data" class="fuente">
+			<table class="fondo">
+				<tr>
+					<th>Nombre:</th>
+					<td><input name="nombre" type="text" maxlenght="100" size="100" value="formato 'apellido apellido, nombre...'"/></td>
+				</tr>
+				<tr>
+					<td>Email:</td>
+					<td><input name="Correo" type="text" maxlenght="35" size="35" value="@" /></td>
+				</tr>
+				<tr>
+					<td>Ciudad:</td>
+					<td>
+						<select name="Ciudad">
+							<option value="betanzos" selected="selected">Betanzos</option>
+							<option value="coruna">A Coru&ntilde;a</option>
+							<option value="ferrol">Ferrol</option>
+							<option value="santiago">Santiago</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Sexo:</td>
+					<td>
+						<input type="radio" name="sexo" value="Hombre" checked="checked"/>Hombre
+						<input type="radio" name="sexo" value="Mujer"/>Mujer
+					</td>
+				</tr>
+
+				<tr>
+					<td>Estudios</td>
+					<td>
+						<hr/>
+						<input type="radio" name="estudios" value="primaria"/>Primaria
+						<input type="radio" name="estudios" value="secundaria"/>Secundaria
+						<input type="radio" name="estudios" value="grado"/>Grado
+						<input type="radio" name="estudios" value="postgrado"/>Postgrado
+						<hr/>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="textoalto">Informacion Adicional:</td>
+					<td>
+						<input type="checkbox" name="coche_propio" value="vehiculo_propio"/> Vehiculo propio <br/>
+						<input type="checkbox" name="pc_personal" value="ordenador_personal"/> Ordenador Personal <br/>
+						<input type="checkbox" name="alta_definicion" value="tv_hd"/> TV HD
+					</td>
+				</tr>
+				
+				<tr>
+					<td class="textoalto">Observaciones:</td>
+					<td>
+						<textarea name="area" rows="6" cols="80"></textarea>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Adjuntar Archivo:</td>
+					<td>
+						<input type="file" name="adjunto"/>
+					</td>
+				</tr>
+
+
+			</table>
+			<input class="centro" type="reset" name="borrar" value="Borrar"/>
+			<input class="centro" type="submit" name="enviar" value="Enviar"/>
+			</form>
+
+			<h1>Rellena tu CV</h1>
+			<form>
+				<fieldset>
+					<legend>Datos Personales</legend>
+					
+					<label for="provincia"> Provincia</label><br/>
+					<select id="provincia" name="provincia">
+						<option value="pepito">pepito</option>
+						<option value="pepito1">pepito1</option>
+						<option value="pepito2">pepito2</option>
+						<option value="pepito3">pepito3</option>
+					</select><br/><br/>
+
+					<label for="fecha">Fecha de nacimiento</label><br/>
+				  	<input type="text" size="2" maxlength="2" name="fecha" id="fecha" value="">
+				  	
+				  	<label for="mes">de</label>
+				   	<select id="mes" name="mes">
+				   		<option value="enero">Enero</option>
+				   		<option value="febrero">Febrero</option>
+				   		<option value="marzo">Marzo</option>
+				  	 </select>
+				   	
+				   	<label for="anio">de</label>
+				   	<input type="text" size="4" maxlength="4" name="anio" id="anio" value=""><br/><br/>
+				   
+				   <label for="temas">Temas de Interes</label><br/>
+					<select name="temas" id="temas" size="5">
+						<option value="administracion">Administración de bases de datos</option>
+						<option value="analisis">Analisis y Programación</option>
+						<option value="arquitectura">Arquitectura</option>
+						<option value="calidad">Calidad</option>
+						<option value="erp">ERP, CRM, Bussiness Intelligence</option>
+					</select>
+
+				</fieldset>
+
+			</form>
+
+			<h4>FORMULARIO DE INSCRIPCION</h4>
+			Para hacerte voluntario, por favor, rellene el siguiente formulario.
+
+		</table>
+			<form action="mailto:danimasters@hotmail.com" method="post" enctype="multipart/form-data">
+				<table>
+					<tr>
+						<td colspan="2"><h2 class="separacion">DATOS PERSONALES</h2><hr/></td>
+					</tr>
+					<tr>
+						
+						<td>
+						<label class="azulito" for="nombre">Nombre:</label><br/>
+						<input type="text" maxlength="50" size="50" value="" id="nombre" name="nombre">
+					    </td>
+
+						<td>
+						<label class="azulito" for="apellido">Apellidos:</label><br/>
+						<input type="text" maxlength="50" size="50" value="" id="apellido" name="apellido">
+					    </td>
+					</tr>
+					
+					<tr>
+						<td>
+						<label class="azulito" for="fecha">Fecha de nacimiento(AAAA-MM-DD):</label><br/>
+						<input type="text" maxlength="10" size="50" value="" id="fecha" name="fecha">
+					    </td>
+
+						<td>
+						<label class="azulito" for="lugarde">Lugar de Nacimiento</label><br/>
+						<input type="text" maxlength="50" size="50" value="" id="fecha" name="fecha">
+					    </td>
+					</tr>
+
+					<tr>
+						<td>
+						<label class="azulito" for="pais">Nacionalidad:</label><br/>
+						<input type="text" maxlength="50" size="50" value="" id="pais" name="pais">
+					    </td>
+
+						<td>
+						<label class="azulito" for="sexo">Sexo:</label><br/>
+						<select name="sexo" id="sexo">
+							<option value="femenino">Femenino</option>
+							<option value="masculino" selected="selected">Masculino</option>
+						</select>
+					    </td>
+					</tr>
+
+					<tr>
+						<td colspan="2"><h2 class="separacion">IDENTIFICACION</h2><hr/></td>
+					</tr>
+
+					<tr>
+						<td>
+						<label class="azulito" for="tipo">Tipo:</label><br/>
+						<select name="tipo" id="tipo">
+							<option value="dni" selected="selected">DNI</option>
+							<option value="nif">NIF</option>
+							<option value="pasaporte">Pasaporte</option>
+						</select>
+					    </td>
+
+					    <td>
+						<label class="azulito" for="numero">Numero:</label><br/>
+						<input type="text" maxlength="9" size="50" value="" id="numero" name="numero">
+					    </td>
+
+					</tr>
+
+					<tr>
+						<td colspan="2"><h2 class="separacion">INFORMACION DE CONTACTO</h2><hr/></td>
+					</tr>
+
+					<tr>
+						<td colspan="2">
+						<label class="azulito" for="pais">Pais:</label><br/>
+						<select name="pais" id="pais">
+							<option value="argentina" selected="selected">Argentina</option>
+							<option value="espania">Espa&ntilde;a</option>
+							<option value="italia">Italia</option>
+						</select>
+					    </td>
+					</tr>
+
+					<tr>
+						<td>
+						<label class="azulito" for="provincia">Provincia:</label><br/>
+						<input type="text" maxlength="50" size="50" value="" id="provincia" name="provincia">
+					    </td>
+
+					    <td>
+						<label class="azulito" for="localidad">Localidad:</label><br/>
+						<input type="text" maxlength="50" size="50" value="" id="localidad" name="localidad">
+					    </td>
+					</tr>
+
+					<tr>
+						<td>
+						<label class="azulito" for="direccion">Direccion:</label><br/>
+						<input type="text" maxlength="50" size="50" value="" id="direccion" name="direccion">
+					    </td>
+
+					    <td>
+						<label class="azulito" for="cp">C.P.:</label><br/>
+						<input type="text" maxlength="5" size="50" value="" id="cp" name="cp">
+					    </td>
+					</tr>
+
+					<tr>
+						<td>
+						<label class="azulito" for="telefono">Telefono:</label><br/>
+						<input type="text" maxlength="9" size="50" value="" id="telefono" name="telefono">
+					    </td>
+
+					    <td>
+						<label class="azulito" for="email">Email:</label><br/>
+						<input type="text" maxlength="50" size="50" value="" id="email" name="email">
+					    </td>
+					</tr>
+
+					<tr>
+						<td colspan="2"><h2 class="separacion">FORMACION</h2><hr/></td>
+					</tr>
+
+					<tr>
+						<td colspan="2">
+							<label class="azulito" for="pais">Nivel de estudios:</label><br/>
+							<select name="nivel" id="nivel">
+								<option value="primaria" selected="selected">Primaria</option>
+								<option value="secundaria">Secundaria</option>
+								<option value="fp">FP</option>
+							</select>
+						</td>
+					</tr>
+
+					<tr>
+						<td colspan="2">
+							<label class="azulito" for="universitarios">Titulos Universitarios:</label><br/>
+							<textarea name="universitarios" id="universitarios" cols="55" rows="2"></textarea>
+						</td>
+					</tr>
+
+					<tr>
+						<td colspan="2">
+							<label class="azulito" for="postgrado">Titulos Postgrado:</label><br/>
+							<textarea name="postgrado" id="postgrado" cols="55" rows="2"></textarea>
+						</td>
+					</tr>
+
+					<tr>
+						<td colspan="2">
+							<label class="azulito" for="complementaria">Formacion Complementaria:</label><br/>
+							<textarea name="complementaria" id="complementaria" cols="55" rows="2"></textarea>
+						</td>
+					</tr>
+
+					<tr>
+						<td colspan="2">
+							<label class="azulito" for="anios">En que a&ntilde;o terminas tus estudios:</label><br/>
+							<textarea name="anios" id="anios" cols="55" rows="2"></textarea>
+						</td>
+					</tr>
+
+					<tr>
+						<td colspan="2"><h2 class="separacion">HABILIDADES</h2><hr/></td>
+					</tr>
+
+					<tr>
+						<td colspan="2">
+							<label class="azulito" for="carnet">Carnet:</label><br/>
+							<select name="carnet" id="carnet">
+								<option value="si" selected="selected">Si</option>
+								<option value="no">No</option>
+							</select>
+						</td>
+					</tr>
+
+					<tr>
+						<td colspan="2">
+							<label class="azulito" for="exp">Experiencia en voluntariado:</label><br/>
+							<textarea name="exp" id="exp" cols="55" rows="2"></textarea>
+						</td>
+					</tr>
+
+
+					<tr>
+						<td class="azulito"><input type="checkbox" name="acreditaciones" value="acreditaciones"/> Acreditaciones</td>
+						<td class="azulito"><input type="checkbox" name="informacion" value="informacion"/> Informacion</td>
+					</tr>
+
+					<tr>
+						<td class="azulito"><input type="checkbox" name="alojamiento" value="alojamiento"/> Alojamiento</td>
+						<td class="azulito"><input type="checkbox" name="logistica" value="logistica"/> Logistica y Tecnologia</td>
+					</tr>
+
+					<tr>
+						<td class="azulito"><input type="checkbox" name="acompaniantes" value="acompaniantes"/> Acompa&ntilde;antes de delegaciones</td>
+						<td class="azulito"><input type="checkbox" name="marketing" value="marketing"/> Marketing y Promocion</td>
+					</tr>
+
+					<tr>
+						<td class="azulito"><input type="checkbox" name="catering" value="catering"/>Catering</td>
+						<td class="azulito"><input type="checkbox" name="seguridad" value="seguridad"/> Seguridad</td>
+					</tr>
+
+					<tr>
+						<td class="azulito"><input type="checkbox" name="protocolo" value="protocolo"/> Ceremonias y protocolo</td>
+						<td class="azulito"><input type="checkbox" name="dopaje" value="dopaje"/> Servicios medicos y Dopaje</td>
+					</tr>
+					
+					<tr>
+						<td class="azulito"><input type="checkbox" name="competicion" value="competicion"/> Competicion y entrenamientos</td>
+						<td class="azulito"><input type="checkbox" name="voluntarios" value="voluntarios"/> Voluntarios</td>
+					</tr>
+
+					<tr>
+						<td class="azulito"><input type="checkbox" name="prensa" value="prensa"/> Comunicacion y prensa</td>
+						<td class="azulito"><input type="checkbox" name="traductores" value="traductores"/> Traductores</td>
+					</tr>
+
+					<tr>
+						<td class="azulito"><input type="checkbox" name="deportivos" value="deportivos"/> Escenarios Deportivos</td>
+						<td class="azulito"><input type="checkbox" name="transporte" value="transporte"/> Transporte</td>
+					</tr>
+
+					<tr>
+						<td style="padding-bottom: 20px;" colspan="2" class="azulito"><input type="checkbox" name="resultados" value="resultados"/> Gestion resultados</td>
+					</tr>
+
+					<tr>
+						<td colspan="2"><h3 class="azulito">Idiomas</h3></td>
+					</tr>
+
+					<tr>
+						<td>
+							<label class="azulito" for="espaniol">Espa&ntilde;ol:</label><br/>
+							<select name="espaniol" id="espaniol">
+								<option value="ninguno" selected="selected">Ninguno</option>
+								<option value="medio">Medio</option>
+								<option value="alto">Alto</option>
+							</select>
+						</td>
+
+						<td>
+							<label class="ingles" for="ingles">Ingles:</label><br/>
+							<select name="ingles" id="ingles">
+								<option value="ninguno" selected="selected">Ninguno</option>
+								<option value="medio">Medio</option>
+								<option value="alto">Alto</option>
+							</select>
+						</td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td>
+							<label class="azulito" for="otrosI">Otros Idiomas:</label><br/>
+							<input type="text" name="otrosI" id="otrosI" maxlenght="50" size="50" value="">
+						</td>
+					</tr>
+
+					<tr>
+						<td colspan="2">
+							<label class="azulito" for="espaniol">Frances:</label><br/>
+							<select name="espaniol" id="espaniol">
+								<option value="ninguno" selected="selected">Ninguno</option>
+								<option value="medio">Medio</option>
+								<option value="alto">Alto</option>
+							</select>
+						</td>
+					</tr>
+
+					<tr>
+						<td colspan="2"><h3 class="azulito" Style="padding-top:20px">Otras habilidades</h3></td>
+					</tr>
+
+					<tr>
+						<td>
+							<label class="azulito" for="disca">Discapacidades/Alergias: </label><br/>
+							<input type="text" name="disca" id="disca" maxlenght="50" size="50" value="">
+						</td>
+						<td>
+							<label class="azulito" for="otros">Otros:</label><br/>
+							<input type="text" name="otros" id="otros" maxlength="50" size="50" value="">
+						</td>
+					</tr>
+
+					<tr>
+						<td colspan="2">
+							<label class="azulito" for="disponibilidad">Disponibilidad/Alergias:</label><br/>
+							<select name="disponibilidad" id="disponibilidad">
+								<option value="inmediata" selected="selected">Inmediata</option>
+								<option value="tarde">Tarde</option>
+								<option value="temprano">Temprano</option>
+							</select>
+						</td>
+					</tr>
+
+					<tr>
+						
+						<td colspan="2"><input type="checkbox" name="acepto" id="acepto" value="acepto"><label class="azulito" for="condiciones">He leido y acepto la <a href="https://www.google.es/policies/privacy/">politica de privacidad</a></label><br/></td>
+
+					</tr>
+
+					<tr>
+						<td colspan="2" class="derecha"><input type="submit" name="enviar" value="Enviar" src="imagen/boton.jpg"/></td>
+
+					</tr>
+				</table>
+				
+
+			</form>
+	</body>
+</html>
