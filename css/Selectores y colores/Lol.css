@@ -1,0 +1,203 @@
+/* Esto es un comentario en CSS*/
+/* Reglas y/o Recomendaciones:
+		* Agrupar en una las reglas relativas a un mismo elemento, y no tener varios selectores del mismo tipo esparcidos por ahi. A su vez, esquematizarlo de manera
+		que su lectura sea sencillo y gráfica.
+		* Cuando se establece el valor de alguna propiedad en un elemento, todos los descendientes de dicho elemento heredan inicialmente ese mismo valor. Por ejemplo
+		si un body tiene una declaracion de letra en color rojo, todos los elementos dentro del body tendrán la letra roja por defecto, salvo que se indique otra cosa.
+		* Resolución de colisiones:
+			1. Cuanto más específico sea un selector, más importancia tiene su regla asociada. Por contra, cuanto mas genérico, menos importante será.
+			2. A igual especificidad, se considera la última regla indicada.
+			3. En algunos casos podemos anteponer un selector a otro con la palabra clave !important. No abusar de ella.
+	
+	Unidades de Medida: Si no se especifican, se aplican los valores por defecto. Los valores decimales inferiores a uno, pueden omitir el 0. Ej: 0.9= .9;
+		-Unidades relativas: definen su valor en relación con otra medida, por lo que para obtener su valor real, se debe realizar alguna operación con el valor 
+		indicado. Algunos tipos:
+			+em, relativa respecto a la anchura de la letra M
+			+px, relativa respecto a la pantalla del usuario
+			+ex, relativa respecto a la altura de la letra x 
+		-Unidades Absolutas Las unidades absolutas definen las medidas de forma completa, ya que sus valores reales no se calculan a partir de otro valor de 
+		referencia, sino que son directamente los valores indicados. Utilizadas sobre todo para documentos impresos. Tipos:
+			+in, pulgada
+			+cm
+			+mm
+			+pt puntos
+			+pc picas;
+
+		-Porcentajes: Formadas por un valor numérico seguido del simbolo %, siempre referenciando a otra medida.
+
+		Se recomienda utilizar pixeles y porcentajes para definir el layout y em y porcentajes para el tamaño de la letra de los textos.
+
+	Colores, tipos de representación:
+		-Palabras clave: aqua, black, blue, fuchsia, gray, green, lime, maroon, navy, olive, orange, purple, red, silver, teal, white, yellow;
+		-Hexadecimal: Estructura: color: #4762B0; color=#FBA (Esto seria igual a #FFBBAA);
+		-Decimal RGB: Define la cantidad de rojo, verde y azul con que se quiere mezclar y obtener un color. Todos a 0 es negro y todos a 255 es blanco
+		 Estructura: color: rgb(255,255,255);
+		-Porcentual RGB: Misma estructura que en decimal, los porcentajes se aplican al valor máximo 255; 
+*/
+/*__________________________________________________________________SELECTORES BÁSICOS_____________________________________________________________*/
+/* SELECTORES UNIVERSAL*/
+/*Este es el selector universal, que se aplica a todos los contenedores y etiquetas del documento elegido. Es muy dificil encontrar una propiedad que se aplique a toda
+la página, con lo cual no suele utilizarse para ello, pero si para combinarlo con otras propiedades de otros selectores mas especificos*/
+*{
+	font-size: 1em;
+
+}
+
+/* SELECTORES DE ETIQUETA */
+/*Este es un selector de tipo etiqueta, con lo cual es aplicado todas las veces que esa etiqueta aparezca en la página. En este caso, todos los párrafos 
+van a tener aplicadas las reglas css que se definen a continuacion*/
+p{
+	font-family: comic;
+	font-weight: bold;
+}
+
+/*Si resulta que varios selectores coinciden en los estilos que se aplican, podemos juntar dichos selectores en una sola declaración con le caracter ",".  DE esta
+manera, citando el ejemplo posterior, a los titulares de primer, segundo y tercer nivel se les aplicará un tamaño mayor en la fuente. A mayores, se les puede espe
+cificar algun estilo concreto a cada uno de los contenedores.*/
+h1, h2 ,h3{
+	font-size: 200%;
+}
+
+h1{
+	color: green;
+}
+h2{
+	color: red;
+}
+h3{
+	color: blue;
+}
+
+/* SELECTORES DESCENDENTES */
+/*Los estilos de un selector descendente se aplican a elementos dentro de otros elementos, sin necesidad de que el 1er elemento sea hijo directo del otro. Estos 
+selectores descendentes se representan por un espacio en blanco entre los dos elementos que queramos "emparentar". Citando el ejemplo posterior, todo span que se
+encuentre dentro de un párrafo tendrá un fondo color rojo. Este Span puede no ser descendiente directo del párrafo, pudiendo haner entre ellos un número x de etiquetas.
+El resto de etiquetas span que haya en el documento y que no sean hijos de un párrafo quedarán por defecto o como se hayan especificado en otro selector.*/
+p span{
+	background-color: rgb(100, 100,0);
+}
+/*Selector descendiente de 4 niveles, que se aplica a los em que estén dentro de un span, que a su vez esten dentro de un a y que a su vez se encuentren incluidos
+en un párrafo.*/
+p a span em { 
+	text-decoration: underline;
+	 }
+
+/*Podemos combinar un selector descendiente con el universal por ejemplo. En este caso, un span que esté dentro de lo que sea tendrá texto con familia verdana*/
+* span{
+	font-family: verdana;
+}
+
+/* SELECTORES DE CLASE */
+/* Se utiliza el atributo class="Nombreclase" en las etiquetas, para aplicar directamente el estilo que deseemos. En CSS, para representar una clase lo hacemos por un punto
+seguido del nombre de la clase. De esta manera, en situaciones donde encontremos varias etiquetas del mismo tipo al mismo nivel y solo queramos aplicar estilos en una, lo podremos
+hacer con una clase. En el siguiente ejemplo, inicializamos un selector de clase rojo, con una sola propiedad que pone el texto al color rojo. Si queremos que, por
+ejemplo, un párrafo pertenezca a esa clase, en el html lo haremos de esta manera <p class="rojo">Contenido</p>*/
+
+.rojo{
+	color: red;
+}
+
+/*Podemos combinar estos selectores de clase con los descritos anteriormente, de manera que podemos aplicar solo los atributos de una clase si esta es contenida por
+un párrafo*/
+
+p.centro{
+	text-align: center;
+}
+
+/* Tambien podemos decir que todos los elementos de la clase centro que esten dentro de un párrafo apliquen las normas*/
+p .centro{
+	text-align: center;
+}
+
+/* O que los parrafos y los elementos de clase centro tengan tengas aplicadas las normas*/
+/*p, .centro{
+	text-align: center;
+}*/
+
+/* Una etiqueta puede contener varias clases, de manera que en el atributo class="clase1 clase2" estas clases se separen por un espacio en blanco. Tambien podemos
+especificar una serie de atributos para los elementos que cuenten con dos clases*/
+
+.rojo.centro{
+	font-size: 300%;
+}
+
+.rojo .centro{
+	text-decoration: underline;
+	color: green; /*Recordemos que todas las clases rojo tienen texto rojo, sin embargo esta al ser la ultima en aplicarse y la mas especifica, transforma el color en verde*/
+}
+
+/* SELECTORES DE ID */
+/*Permite seleccionar un único elemento de la página a través del valor de su atributo id. Solo un elemento puede tener un valor id, es decir, varios elementos
+no pueden tener el mismo id. Podría usarse el selector de clase para esto, pero en casos de un único caso suele utilizarse ID y donde haya repeticiones se utiliza class.
+En CSS las id se representan con "#" y en HTML se les hace referencia con el atributo id="nombreID"*/
+
+/*Se aplica a una etiqueta de id cursiva*/
+#cursiva{
+ 	font-style: italic;
+}
+/*Combinado con otros selectores. Puede parecer absurdo en primera instancia, pero esta pensado para cuando disponemos de muchas páginas HTML y utilizamos la misma id una 
+vez en cada una de ellas. Aplicado a un span de id cursiva dentro de un parrafo*/
+p span#cursiva{
+  font-style: italic;
+}
+
+/* Aplicado a la etiqueta de id cursiva que esté dentro de un párrafo de clase rojo*/
+p.rojo #cursiva{
+	font-style: italic;
+}
+
+
+/*__________________________________________________________________SELECTORES AVANZADOS____________________________________________________________*/
+
+/*SELECTOR DE HIJOS (DIRECTOS)*/
+/*Se utiliza para aplicar estilos a un elemento que es hijo directo de otro, y se representa por el símbolo ">". Esquema: "Padre > Hijo". En el
+ejemplo siguiente se ponen todos los elementos de una lista desordenada con color rojo y en negrita. */
+
+ul>li{
+	font-weight: bold;
+	color:red;
+}
+
+/* SELECTOR ADYACENTE*/
+/*El selector adyacente se aplica sobre una etiqueta que tenga el mismo padre que otra y que sea adyacente a ella, es decir, que estén una junto a la otra.
+Se representa por el símbolo "+" Tengase en cuenta que si hacemos, por ejemplo, p + p, todos los párrafos que tenga un párrafo hermano aplicaran el estilo, excepto
+el primero*/
+
+/*Se aplica sobre las definiciones que tenga al lado un termino, y que tengan el mismo padre, en este caso una lista de definiciones*/
+dt + dd{
+	font-family: arial;
+	font-style: italic;
+}
+
+
+/* SELECTOR DE ATRIBUTOS */
+/*Aplican CSS a elementos HTML en función de sus atributos. Tipos: 
+	▪ [nombre_atributo], selecciona los elementos que tienen establecido el atributo llamado nombre_atributo, independientemente de su valor.
+	▪ [nombre_atributo=valor], selecciona los elementos que tienen establecido un atributo llamado nombre_atributo con un valor igual a valor.
+	▪ [nombre_atributo~=valor], selecciona los elementos que tienen establecido un atributo llamado nombre_atributo y al menos uno de los valores del atributo es valor.
+	▪ [nombre_atributo|=valor], selecciona los elementos que tienen establecido un atributo llamado nombre_atributo y cuyo valor es una serie de palabras
+	separadas con guiones, pero que comienza con valor. Este tipo de selector sólo es útil para los atributos de tipo lang que indican el idioma del contenido del
+	elemento.*/
+
+	/*Este ejemplo se aplica a todos los a que apunten a google*/
+a[href="http://www.google.com"]{
+		text-decoration: line-through;
+		font-weight: bold;
+}
+
+	/* Párrafos con al menos la clase rojo */
+	p[class~="rojo"]{
+		text-decoration: underline;
+	}
+
+	p#cursiva span strong a[href="pepitoperez.html"] {
+		letter-spacing: 2em;
+		width: 100%; 
+	}
+
+	.rojo [href="pepitoperez.html"]:hover img{
+		background: url("Desert.jpg")
+
+	}
+
+	
