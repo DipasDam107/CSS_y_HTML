@@ -1,0 +1,203 @@
+*{
+ font-family: 'Oswald', sans-serif;
+}
+body{
+	background: black;
+	background:url(calendar.jpg), #000;
+	margin: 0;
+}
+
+.envoltorioPagina{
+	margin: 0 auto;
+	max-width: 850px;
+	min-width: 850px;
+	position: relative;
+	top:10px;
+
+}
+
+.intro{
+position:relative;
+	z-index: 1;
+	margin: 0 auto;
+	max-width: 450px;
+	background: white;
+	height: 40px;
+	border-radius: 10px;
+	-webkit-box-shadow: 7px 9px 5px 1px rgba(230,230,230,0.52);
+	-moz-box-shadow: 7px 9px 5px 1px rgba(230,230,230,0.52);
+	box-shadow: 7px 9px 5px 1px rgba(230,230,230,0.52);
+}
+
+.intro header{
+	position: relative;
+	top:10px;
+
+}
+.intro h1{
+	text-transform: uppercase;
+	vertical-align: center;
+	text-align:center;	
+	font-size: 1em;
+	margin: 0;	
+}
+
+.menu{
+	
+	background-color: gray;
+	color: white;
+	height: 30px;
+	position: relative;
+	min-width: 850px;
+}
+
+
+.menu div{
+	display: inline-block;	
+	height: 100%;
+}
+
+
+.menu ul{
+	
+	position: absolute;
+	top: 20px;
+	max-height: 0;
+	overflow: hidden;
+	margin: 0;
+	background: gray;
+	padding:0px;
+}
+
+.menu ul li{
+	list-style-type: none;
+	width:100px;
+	
+}
+
+.menu li a{
+	display: block;
+	
+	margin-left: 5px;	
+}
+.menu h3 a, .menu li a{
+	text-decoration: none;
+}
+
+.menu a:visited, menu a:link{
+	color: white;
+}
+
+.menu div:hover ul{
+	max-height: 700px;
+	transition: 3s ease all;	
+}
+
+.menu li:hover{
+	background: white;
+	
+}
+.menu li:hover a{
+	color: black;
+}
+.menu h3{
+	margin: 0px 5px;
+}
+
+
+
+.menu div:hover{
+	background-color: white;
+	
+	
+}
+
+.menu div:hover h3, .menu div:hover h3 a{
+	color: black;
+}
+
+
+/*Cuerpo*/
+.cuerpo{
+	position:relative;
+	z-index: 1;
+	background: white;
+	max-width: 450px;
+	margin: 40px auto;
+	padding: 10px 0px;
+	border-radius: 20px;
+	-webkit-box-shadow: 7px 9px 5px 1px rgba(230,230,230,0.52);
+	-moz-box-shadow: 7px 9px 5px 1px rgba(230,230,230,0.52);
+	box-shadow: 7px 9px 5px 1px rgba(230,230,230,0.52);
+}
+
+.cuerpo, .cuerpo *{
+	z-index:1;
+}
+
+.cuerpo h1{
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	font-size: 1.8em;
+}
+
+form{
+	margin: 0 auto;
+	width: 205px;
+}
+form div{
+	padding: 0;
+	margin: 0;
+}
+form label{
+	font-size: 1.2em;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bolder;
+}
+
+form input{
+	margin: 5px 0px;
+	width: 200px;
+}
+
+form input.texto{
+	
+	line-height: 40px;
+	font-size: 1.2em;
+	margin: 15px 0px;
+	border-radius: 5px;
+	box-shadow: 0 0 0 2pt red;
+	outline: 0px;
+	border: 0px;
+}
+
+form input.texto:hover, form input.texto:focus, form input.texto:focus:hover{
+	
+	box-shadow: 0 0 3pt 2pt red;
+	border-radius: 5px;
+}
+
+form .boton{
+	height: 40px;
+	width: 100px;
+	font-size: 0.6em;
+	text-transform: uppercase;
+	font-weight: bolder;
+}
+
+form .boton:hover{
+	background: rgb(177,40,40);
+	background: linear-gradient(90deg, rgba(177,40,40,1) 40%, rgba(207,16,16,1) 100%);
+	color: white;
+	transition: 0.2s all ease;
+}
+
+#particles-js{
+	position:fixed;
+	width: 100%;
+	height:100%;
+	background: rgba(0,0,0, .8);
+	z-index: 0;
+}
