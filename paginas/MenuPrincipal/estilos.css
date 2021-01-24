@@ -1,0 +1,339 @@
+:root{
+    --fondoBlanco: white;
+    --fondoNegro: black;
+}
+
+body{
+    background-image: url("./calendar.jpg"); 
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+#particles-js{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background:rgba(0, 0, 0, 0.8);
+    margin: 0;
+    
+}
+
+.envoltorioPagina{
+    margin: 0 auto;
+    width: 900px;
+    position: relative;
+    top: 20px;
+}
+
+.intro, .cuerpo{
+    background-color: var(--fondoBlanco);
+    width: 100%;
+    position: relative;
+}
+
+
+.intro{
+    margin-bottom: 20px;
+    height: 60px;
+    z-index: 2;
+}
+
+.cuerpo{
+    z-index: 1;
+}
+
+.titulo{
+    position: relative;
+    height: 100%;
+}
+.title{
+    display: inline-block;
+    height: 30px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.intro h1{
+    font-size: 1.5em;
+    position: relative;
+    bottom:3px
+}
+
+.intro h1, .cuerpo h1{
+    margin: 0;
+    padding: 0;
+    text-transform :uppercase;
+    vertical-align: text-bottom;
+}
+
+
+.intro h1, .intro img{
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.titulo h3{
+    display: inline-block;
+    margin: 0;
+    padding-bottom: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 15px;
+    text-transform: uppercase;
+    height: 30px;
+    width: 110px;
+    font-size: 1.1em;
+}
+
+header *{
+    align-items: center;
+}
+.titulo .opcionMenu:hover h3{
+    background-color: black;
+    color:white;
+    cursor: pointer;
+}
+
+.menu{
+    float:right;
+    height: 100%;
+}
+
+.menu div{
+    display: inline-block;
+    text-align: center;
+    height: 100%;
+}
+
+/*SubOpciones*/
+nav{
+    position: absolute;
+    width: 126px;
+    background-color: white;
+    z-index: 4;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.5s all ease;
+    border: 2px solid black;
+}
+
+.menu .opcionMenu:hover nav{
+    max-height: 400px;
+}
+
+nav ul{
+    display: inline-block;
+    width: 100%;
+    padding:0;
+    margin:0;
+}
+.menu li{
+    list-style: none;
+    display: block;
+}
+
+.menu li a{
+    text-decoration: none;
+    display: block;
+    
+}
+
+.menu li a:hover{
+    background-color: black;
+    color: white;
+}
+.menu a:visited, menu a:link{
+	color: black;
+}
+/* Busqueda */
+
+.categoria{
+    margin-top:8px;
+    width: 300px;
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+
+}
+form.buscaCategoria input[type=text] {
+    padding: 10px;
+    font-size: 13px;
+    border: 1px solid grey;
+    float: left;
+    width: 65%;
+    background: #f1f1f1;
+  }
+
+form.buscaCategoria button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: black;
+    color: white;
+    font-size: 13px;
+    border: 1px solid grey;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+  }
+
+  form.buscaCategoria button:hover {
+    background: #0b7dda;
+  }
+  
+  /* Crear Calendario*/
+  .crearCalendario{
+      display: block;
+      width: 40px;
+      height: 40px;
+      margin: 0 auto;
+      position:relative;
+      top:30px;
+      
+  }
+
+  .crearCalendario button{
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    font-size: 2em;
+    background-color: #f1f1f1;
+    transition: 0.3s all ease;
+    box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.86);
+    
+    }
+
+    .crearCalendario button:hover{
+        cursor: pointer;
+        background-color: black;
+        color: white;
+    }
+
+  /* Clear floats */
+  form.buscaCategoria::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+/* Cuerpo */
+.cuerpo h1{ 
+    margin-left: 20px;
+    display: inline-block;
+}
+
+.envoltorioCuerpo{
+    margin:10px;
+    padding:10px;
+}
+/*Calendarios*/
+
+
+
+.calendario{
+    display: inline-block;
+    border: 1px solid gray;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.86);
+    width: 220px;
+    position: relative;
+    margin: 0px 12px 0px 12px;
+    background-color: #f1f1f1;
+}
+
+.calendario:hover{
+    cursor: pointer;
+}
+
+.calendario:hover h3{
+    background-color: snow;
+    color: black;
+    transition: 0.2s ease all;
+}
+
+.calendario h3{
+    margin:0;
+    font-size: 1.1em;
+    height: 30px;
+    overflow: hidden;
+    text-align: center;
+    background-color: black;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.tdesc{
+    margin: 10px 10px;
+    height: 100px;
+    overflow: hidden;
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 0.7em;
+
+}
+.tData{
+    position: absolute;
+    height: 40px;
+    bottom: 0px;
+    border-top: 3px black solid;
+    width: 100%;
+    padding-top: 5px;
+}
+.tData :nth-child(1){
+    margin-left: 15px;
+}
+
+.tImage img{
+    
+    display:block;
+    margin:auto;
+}
+
+.tData span{
+    display: inline-block;
+    width: 45%;
+}
+
+.lineaCalendarios{
+   width: 750px;
+   margin: 50px auto;
+}
+
+.botonera{
+    position: relative;
+    top: 40px;
+    width: 100%;
+    margin: 0 auto;
+}
+.calendario button{
+    width: 49%;
+    height: 30px;
+    border-radius: 3px;
+    box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.86);
+    text-transform: uppercase;
+    font-weight: bolder;
+    transition: 0.4s all ease;
+}
+
+.botonera :nth-child(1) button{
+    background-color: black;
+    color: white;
+   
+}
+.botonera :nth-child(2) button{
+    background-color: white;
+    color: black;
+}
+
+.botonera :nth-child(1) button:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    
+}
+.botonera :nth-child(2) button:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}

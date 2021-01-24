@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+		<title>Menu Principal</title>
+		<link rel="stylesheet" type="text/css" href="./estilos.css" media="screen">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta name="author" content="Daniel Di Pasqua">
+    </head>
+    <body>
+        <div id="particles-js"></div>
+		<div class="envoltorioPagina">
+			<section class="intro">
+				<header class="titulo">
+                    <div class="title">
+                        <img src="calendar1.png" alt="Calendario" width="30" height="30"/>
+                        <h1>Menu Principal</h1>
+                    </div>
+                    <div class="menu">
+                        <div class="opcionMenu">
+                            <h3>Categorias</h3>
+                            <nav role="navigation">
+                                <ul>
+                                    <li><a href="">Crear</a></li>					
+                                    <li><a href="">Eliminar</a></li>													
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="opcionMenu">
+                            <h3>Amigos</h3>
+                            <nav role="navigation">
+                                <ul>
+                                    <li><a href="">Añadir</a></li>					
+                                    <li><a href="">Listar</a></li>												
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="opcionMenu">
+                            <h3>Calendarios</h3>
+                        </div>
+                        <div class="opcionMenu">
+                            <h3>Usuario</h3>
+                            <nav role="navigation">
+                                <ul>
+                                    <li><a href="">Editar Perfil</a></li>					
+                                    <li><a href="">Cerrar Sesion</a></li>													
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+				</header>
+			</section>
+			
+			<div class="cuerpo">
+                <h1>Calendarios Usuario</h1>
+                <div class="categoria">
+                    <form class="buscaCategoria" action="">
+                        <input type="text" placeholder="Categoria" name="search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="crearCalendario"> 
+                    <button>+</button>
+                </div>
+				<div class="envoltorioCuerpo">
+                    <div class="lineaCalendarios">
+                        <span class="calendario">
+                            <h3 class="tCalendar">Eventos Deportivos</h3>
+                            <div class="tImage">
+                                <img src="calendar2.png" alt="Calendario" width="80" height="80"/>
+                            </div>
+                            <div class="tdesc">Calendario de eventos deportivos internacionales, entre ellos, los juegos olímpicos</div>
+                            <div class="tData">
+                                <span>
+                                    <img src="event.png" alt="Calendario" width="30" height="30"/>
+                                    <span>23</span>
+                                </span>
+                                <span>
+                                    <img src="people.png" alt="Calendario" width="30" height="30"/>
+                                    <span>5</span>
+                                </span>
+
+                            </div>
+                            <div class="botonera">
+                                <span>
+                                    <button type="Button">Editar</button>
+                                </span>
+                                <span>
+                                    <button type="Button">Borrar</button>
+                                </span>
+                            </div>
+                        </span>
+                        <span class="calendario">
+                            <h3 class="tCalendar">Cumpleaños Colegas</h3>
+                            <div class="tImage">
+                                <img src="calendar2.png" alt="Calendario" width="80" height="80"/>
+                            </div>
+                            <div class="tdesc">Una lista con los Cumpleaños de mis amigos mas cercanos</div>
+                            <div class="tData">
+                                <span>
+                                    <img src="event.png" alt="Calendario" width="30" height="30"/>
+                                    <span>10</span>
+                                </span>
+                                <span>
+                                    <img src="people.png" alt="Calendario" width="30" height="30"/>
+                                    <span>2</span>
+                                </span>
+
+                            </div>
+                            <div class="botonera">
+                                <span>
+                                    <button type="Button">Editar</button>
+                                </span>
+                                <span>
+                                    <button type="Button">Borrar</button>
+                                </span>
+                            </div>
+                        </span>
+                        <span class="calendario">
+                            <h3 class="tCalendar">Calendario Escolar</h3>
+                            <div class="tImage">
+                                <img src="calendar2.png" alt="Calendario" width="80" height="80"/>
+                            </div>
+                            <div class="tdesc">Contiene fechas de clase, entregas de trabajos y exámenes del ciclo formativo.</div>
+                            <div class="tData">
+                                <span>
+                                    <img src="event.png" alt="Calendario" width="30" height="30"/>
+                                    <span>90</span>
+                                </span>
+                                <span>
+                                    <img src="people.png" alt="Calendario" width="30" height="30"/>
+                                    <span>3</span>
+                                </span>
+
+                            </div>
+                            <div class="botonera">
+                                <span>
+                                    <button type="Button">Editar</button>
+                                </span>
+                                <span>
+                                    <button type="Button">Borrar</button>
+                                </span>
+                            </div>
+                        </span>
+                    </div>
+                    <div class="lineaCalendarios">
+                        <span class="calendario">
+                            <h3 class="tCalendar">Videojuegos</h3>
+                            <div class="tImage">
+                                <img src="calendar2.png" alt="Calendario" width="80" height="80"/>
+                            </div>
+                            <div class="tdesc">Calendario con los lanzamientos mas importantes y conferencias de las distintas compañías</div>
+                            <div class="tData">
+                                <span>
+                                    <img src="event.png" alt="Calendario" width="30" height="30"/>
+                                    <span>23</span>
+                                </span>
+                                <span>
+                                    <img src="people.png" alt="Calendario" width="30" height="30"/>
+                                    <span>5</span>
+                                </span>
+
+                            </div>
+                            <div class="botonera">
+                                <span>
+                                    <button type="Button">Editar</button>
+                                </span>
+                                <span>
+                                    <button type="Button">Borrar</button>
+                                </span>
+                            </div>
+                            
+                        </span>
+                        <span class="calendario">
+                            <h3 class="tCalendar">La Liga</h3>
+                            <div class="tImage">
+                                <img src="calendar2.png" alt="Calendario" width="80" height="80"/>
+                            </div>
+                            <div class="tdesc">Fechas de los distintos partidos de la liga española</div>
+                            <div class="tData">
+                                <span>
+                                    <img src="event.png" alt="Calendario" width="30" height="30"/>
+                                    <span>23</span>
+                                </span>
+                                <span>
+                                    <img src="people.png" alt="Calendario" width="30" height="30"/>
+                                    <span>5</span>
+                                </span>
+
+                            </div>
+                            <div class="botonera">
+                                <span>
+                                    <button type="Button">Editar</button>
+                                </span>
+                                <span>
+                                    <button type="Button">Borrar</button>
+                                </span>
+                            </div>
+
+                        </span>
+                        <span class="calendario">
+                            <h3 class="tCalendar">Varios</h3>
+                            <div class="tImage">
+                                <img src="calendar2.png" alt="Calendario" width="80" height="80"/>
+                            </div>
+                            <div class="tdesc">Pues eso</div>
+                            <div class="tData">
+                                <span>
+                                    <img src="event.png" alt="Calendario" width="30" height="30"/>
+                                    <span>123</span>
+                                </span>
+                                <span>
+                                    <img src="people.png" alt="Calendario" width="30" height="30"/>
+                                    <span>50</span>
+                                </span>
+                            </div>
+                            <div class="botonera">
+                                <span>
+                                    <button type="Button">Editar</button>
+                                </span>
+                                <span>
+                                    <button type="Button">Borrar</button>
+                                </span>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+			</div>
+		</div>
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script src="particles.js"></script>
+		<script src="particulas.js"></script>
+    </body>
+</html>
