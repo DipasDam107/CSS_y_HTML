@@ -1,0 +1,277 @@
+h1{
+	color: white;
+	font-weight: bold;
+	font-family: verdana;
+}
+
+/*MODELO DE CAJAS 
+Al crear cada etiqueta CSS se crea un rectángulo con el contenido en su interior, de manera que nos permite jugar con los 4 laterales:
+	-top
+ 	-right
+ 	-left
+ 	-bottom
+ Cada una de las cajas esá formada por 6 partes (Capas de última a primera):
+ 	
+ 	-Margin: Transparente. Espacio libre entre la caja y las cajas adyacentes
+ 			  Muestra el color e imagen de fondo del padre.
+ 	-Background-color: Color de fondo que se muestra por detrás del contenido y padding
+	-Background-image: Imagen que se muestra por detrás del contenido y espacio de relleno
+					   Conveniente definir background color aunque haya una imagen por encima.
+	-Relleno Padding: Transparente. Espacio entre el contenido y el borde que lo encierra.
+					  Muestra el color e imagen de fondo propios de la caja.	
+	-Border: Linea que encierra el contenido y su relleno.
+	-Contenido(Content): Contenido HTML del elemento
+*/
+
+/* Anchura width
+------------------
+Width controla la anchura de los elementos. Evidentemente la anchura por porcentaje
+se calcula dentro del elemento padre. Si un span está dentro de un div, el primero no 
+podrá ser mas grande que el 2do por pura lógica.
+
+Valores: medida | porcentaje | auto (El navegador calcula automaticamente la anchura) | inherit (Hereda anchura del padre)
+
+Ej: width: 200px;
+*/
+
+/*Altura Height
+-------------------
+Controla la altura de los elementos. Con porcentajes se toma de referencia la altura
+del elemento padre. Inherit hereda del elemento padre y auto indica que el navegador
+debe calcular automaticamente la altura del elemento.
+
+Valores: medida | porcentaje | auto (El navegador calcula automaticamente la anchura) | inherit (Hereda anchura del padre)
+
+Ej: height: 200px;
+*/
+
+.rojo{
+	background-color: red;
+	height: 100px;
+	width:400px;
+	margin-left:20px;
+	}
+
+/*Margen
+----------------------
+Con margin podemos controlar los margenes en los cuatro laterales de la caja:
+	-Margin-top
+	-Margin-right
+	-Margin-bottom
+	-Margin-Left
+Recordemos que si ampliamos el margen de la caja, lo que se va a ver por detras es
+el fondo que tengamos configurado para la caja padre. Los márgenes verticales solo
+son aplicables a elementos de bloque y los laterales a todos.	
+
+Se pueden definir de forma simultanea los cuatro márgenes gracias a lo que se llama
+shorthand o (1,4) de las siguientes maneras:;
+	- Con un solo valor, todos los márgenes tienen ese valor. ej: margin:1.2em;
+	- 2 valores, 1ro verticales, 2do horizontales ej: margin 1.2em 1.3em; (Margenes mas grandes en los costados)
+	- 3 valores, 1ro superior, 2do horizontales tercero inferior ej: margin: 1em 2em 2em;
+	- 4 valores, 1 superior, 2 dcha, 3 abajo, 4 izq ej: margin:1em 2em 1em 2em;
+Se puede combinar las shorthands con los margenes laterales que vimos antes. Ejemplo:
+.lol{
+	margin: 1em;
+	margin-bottom: 2em; 
+};
+
+De esta manera, tendrá el mismo margen en todos los costados, excepto por abajo.
+*/
+
+.verde{
+	background-color: green;
+	height: 100px;
+}
+
+.amarillo{
+	background-color: yellow;
+	height: 100px;
+	
+}
+
+.gris{
+	background-color: gray;
+	height: 100px;
+
+}
+
+div div{
+	margin-left:1.2em;
+	width:100%;
+}
+
+
+/*Fusión de márgenes verticales
+-------------------------------
+Cuando se juntan dos o mas márgenes verticales, se fusionan de forma automática,
+siendo la altura del margen igual a la del margen mas alto de los que se han fusionado.
+Esto se aplica tanto a contenidos hermanos como a padres e hijos(Esto último no he podido
+corroborarlo.). Se produce esto con el fin de dar uniformidad a las páginas.
+*/
+.colores1{
+	background-color: green;
+	padding: 1em;
+	padding-top: 0em;
+	/*margin-top: 1em; PREGUNTAR!!!!*/
+}
+
+.colores2{
+	background-color: red;
+	width: inherit;
+	/*margin-top: 2em;*/
+}
+.margenprimero{
+margin-bottom:1em;
+}
+
+.margensegundo{
+margin-top:3em;
+}
+
+/*Padding o Relleno
+---------------------------
+Establece la separación entre contenido y borde de la caja. Podemos controlar el 
+relleno de los laterales horizontales y verticales, al igual que con lo márgenes:
+ -padding-top
+ -padding-right
+ -padding-bottom
+ -padding-left
+*/
+
+/*
+.relleno{
+	padding-top: 1em;
+	padding-right: 1em;
+	padding-bottom: 1em;
+	padding-left: 1em;
+	height: auto;
+}
+*/
+
+/* Tambien al igual que los márgenes, cuenta con reglas shorthand, de manera que
+en el ejemplo anterior, en lugar de definir individualemente cada lateral, se puede
+hacer los siguiente:*/
+
+.relleno{
+	padding: 1em;
+	height: auto;
+}
+
+/* Estas propiedades shorthand se aplican exactamente en el mismo orden que en los 
+márgenes, con lo cual recomiendo ir al apartado de estos márgenes para consultar el 
+funcionamiento de shorthand */
+
+/* BORDES */
+
+/*Anchura
+----------------------
+Se puede definir la anchura del borde de los cuatro costados, con valores en medidas
+o las palabras reservadas thin, medium, thick:;
+	-border-top-width
+	-border-right-width
+	-border-bottom-width
+	-border-left-width
+Cuenta con las propuedades shorthand que se explicaron antes ej:Border-width:thick;
+
+Estilos
+--------------
+Como también podemos definir estilo para los cuatro costados. Existen los estilos
+ None, Hidden, Dotted, Dashed, Solid, Double, Groove, Ridge, Inset, Outset:
+	-border-top-style
+	-border-right-style
+	-border-bottom-style
+	-border-left-style
+Cuenta con las propuedades shorthand que se explicaron antes ej:Border-style:solid
+
+
+Colores
+-------------------
+Tambien podemos hacerlo con los colores de los cuatro costados:
+	-border-top-color
+	-border-right-color
+	-border-bottom-color
+	-border-left-color
+
+Cuenta con las propuedades shorthand que se explicaron antes, ej:Border-color:blue;
+*/
+
+/* 
+Short hand laterales
+-----------------------
+A su vez, como las propiedades de estilo, color y ancho tienen shorthand
+tambien las tienen los cuatro costados:
+ 	-border-top
+ 	-border-right
+ 	-border-bottom
+ 	-border-left
+
+ ej: border-top: 5px black solid;
+
+Shorthand totales
+-----------------------
+ En caso de que los bordes de los cuatro costados compartan las propiedades
+ hay un short short hand:
+	
+	-border: 2px solid black;
+
+*/
+
+.centro{
+	text-align: center;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.borde{
+	color:white;
+	width: 100px; 
+	height: 25px;
+	background-color: red;
+	border: gray outset;
+	border-width: 5px 10px;
+	border-left-width: 0px;
+	/*border: 2px solid black;*/
+}
+
+/*FONDOS
+--------------------------------
+Indica el fondo de la caja del elemento, puede ser un color simple o una imagen.
+Propiedades:
+
+	-Background-color: Establece un color de fondo con las propiedades de color que
+		ya hemos visto. Podemos indicarle un colo, transparent o inherit;
+	-Background-image: Establece una imagen de fondo por medio de una url, podemos especificar
+		none (ninguna imagen) o inherit (hereda de padre). Cabe destacar que la imagen
+		va por delante del color, aunque es recomendable especificar ambos.
+	-background-repeat:	Por defecto, si especificamos una imagen de fondo que no
+		consigue abarcar toda la caja, esta se repite el número de veces necesario para
+		llenar el elemento. Con este atributo podemos controlar ese comportamiento, 
+		indicando que se repita en el eje x (repeat-x), eje y(repeat-y), en ambos(repeat),
+		que no se repita (no-repeat) o que lo herede (inherit) 
+	-background-position: Permite indicar la distancia que se desplaza la imagen de 
+		fondo respecto a su posición original (Esquina superior izq de la caja):
+			*	Con dos porcentajes o medidas el primero indica el desplazamieto x 
+				y el 2do el y
+			*	Si solo se indica un valor, se aplica desplazamiento horizontal, aplicando
+				automñaticamente el 50% al vertical	
+			* 	Se permite palabras clave top (y=0%), bottom (y=100%), center (y=50% x=50%)
+				right(x=100%) left(x=0%), además de porcentajes y medidas vistas.
+	-background-attachment: Indica el modo en el que "ataca" al background, permitiendo
+		que este se mueva a medida que bajamos el scroll(scroll) o tenga un 
+		posicionamiento fijo(fixed).
+
+Los fondos tambien ofrecen opciones shorthand con Background a secas:
+Background: color url(imagen) repeat attachment posicion
+*/	
+
+body{
+	/*background-color: gray;
+	background-image: url("./metal.jpg");
+	background-repeat: repeat;
+	background-attachment: fixed;*/
+
+	background: gray url("./metal.jpg") repeat fixed;
+	
+	/*background-repeat: no-repeat;
+	background-position: bottom left;*/
+}
