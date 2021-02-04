@@ -1,0 +1,153 @@
+
+h1{
+	color: white;
+	font-weight: bold;
+	font-family: verdana;
+}
+
+body{
+	background: gray url("./metal.jpg") repeat fixed;
+}
+/* Para cumplir con el modelo de cajas se tienen en cuenta los siguientes factores:
+	-Las propiedades Width y height
+	-El tipo de elemento HTML
+	-Posicionamiento de la caja (Absoluto, relativo, fijo o flotante)
+	-Tamaño de imagenes, de la ventana del navegador....
+
+
+TIPOS DE ELEMENTOS
+--------------------
+Bloque: Empiezan una nueva linea y ocupan todo el espacio disponible hasta el final de la
+		misma.
+Línea:	No empiezan necesariamente en una nueva línea y solo ocupan el espacio necesario
+		para mostrar su contenido.	
+*/
+
+.borde{
+	border: solid 2px black;
+}
+
+/*Posicionamiento
+---------------------
+CSS Permite alterar la posición de las cajas para lograr efects muy avanzados, y estructuras
+que serían imposibles de otra manera. Para todos ellos se utiliza la instrucción position:
+
+Position: static | relative | absolute | fixed | inherit;
+top (Desplazamiento superior), right (Desplazamiento lateral dcho), bottom (desplazamiento inf)
+left(Desplazamiento lateral izquierdo)
+
+A continuación se verán los tipos de posicionamiento.
+
+Posicionamiento Normal o Estático
+----------------------------------
+Es el que utilizan por defecto los navegadores, en el que ninguna caja se desplaza respecto
+a su posición original:
+  - La anchura de los elementos está limitada a la anchura de su contenedor
+  - Los bloques se muestran uno debajo del otro, empezando desde la esquina
+  	superior izquierda. La separación entre ellos la determinan los márgenes verticales
+  - Los elementos en línea se muestran uno detrás del otro horizontalmente. 
+  	La separación entre ellos la determinan los márgenes horizontales.
+
+
+ Posicionamiento Relativo
+ ----------------------------------
+ Permite desplazar una caja respecto a su posicíón original, establecida mediante
+ el posicionamiento normal mediante las propiedades top, right, bottom, left.
+
+ El desplazamiento de las cajas no afecta al resto de cajas adyacentes, que se muestran
+ en la misma posición, como si la caja desplazada no se hubiera movido da la posición
+ original.
+
+
+
+
+*/
+
+span.tt{
+	
+	display:inline-block;
+	width: 32.8%;
+	height: 40px;
+}
+div#alto, .tt{
+	background-color: gray;
+	height: 40px;
+}
+
+.movil{
+	position: relative;
+	left: 50px;
+	top: 10px; /*Cabe destacar que left deja espacio por la izquierda con lo cual lo mueve a la decha
+	y top deja espacio por arriba con lo cual lo mueve hacia abajo*/
+} 
+
+/*Posicionamiento Absoluto
+-----------------------------------
+Establece de forma precisa la posición en la que se muestra la caja de un elemento. La 
+nueva posición se establece con top, right, bottom, left. 
+
+Cuando una caja se posiciona de forma absoluta, el resto de elementos la ignoran coupando
+su lugar original. A diferencia del posicionamiento relativo, se toma como origen
+de coordenadas el origen de su primer elemento contenedor posicionado. Para determinar el origen:	
+	- Se buscan los elementos contenedores de la caja hasta el body
+	- Se recorren los contenedores del mas cercano hasta el body
+	- De todos ellos el navegador se queda con el primer elemento contenedor posicionado
+		de manera distinta a Static
+	-Utilizará la esquina superior izquierda de este contenedor como origen de coordenadas.		
+*/
+
+/*Ejemplo con contenedor distinto a static*/
+
+.fondo{
+	position: relative;
+	background-color: red;
+	padding: 5px;
+}
+
+.movilab{
+	position: absolute;
+	left: auto;
+	right: 5px;
+	top: 5px;
+	
+}
+
+
+/*Ejemplo sin contenedor distinto a static: manda body 
+
+.fondo{
+	background-color: red;
+	padding: 5px;
+}
+
+.movilab{
+	position: absolute;
+	left: auto;
+	right: 5px;
+	top: 5px;
+	
+}
+*/
+/*Posicionamiento Fijo
+----------------------------------
+Una caja posicionada de forma fija tiene una posición inamovible dentro de la ventana
+del navegador, sin modificarse aunque el usuario suba o baje la pagina.
+Cuando una caja se posiciona de forma fija, el origen de coordenadas se interpreta
+de manera idéntica al posicionamiento absoluto. 
+*/
+
+.fija{
+	position: fixed;
+	top: 0px;
+	left: 500px;
+	height: 20px;
+	background: gray url("./metal.jpg") repeat;
+	color:white;
+	font-weight: bold;
+	font-family: verdana;
+}
+
+p, a, span{
+	background-color: gray;
+}
+
