@@ -1,0 +1,630 @@
+/*-----------------Pagina--------------------*/
+
+body{
+	 /*Fondo*/
+	 background: url("./Imagenes/fondo4.jpg") no-repeat center top fixed; /* Chrome y Safari */
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	background-attachment: fixed;
+	background-color:#000;
+	
+
+}
+
+/*----------------DIV Contenedor--------------------*/
+.page-wrapper{
+	/*Modelo de caja y posicionamiento*/
+	max-width: 850px;
+	min-width: 850px;
+	margin: 0 auto;
+	position: relative;
+	padding-bottom: 10px;
+
+	/*Fondo*/
+	background-image: linear-gradient( rgb(222,1,1), rgb(157,1,1));
+	background-image: -moz-linear-gradient(top, rgb(222,1,1), rgb(157,1,1));
+	background-image: -o-linear-gradient(top, rgb(222,1,1), rgb(157,1,1));
+	background-image: -ms-linear-gradient(top,rgb(222,1,1), rgb(157,1,1));
+	background-image: linear-gradient(top, rgb(222,1,1), rgb(157,1,1));
+	background-color: rgb(157,1,1);
+	
+	/*Eje Z*/
+	z-index: 1;
+	
+}
+
+/*----------------Cabecera-----------------*/
+
+header{
+	/*Modelo de caja y posicionamiento*/
+	box-shadow: 0px -1px 10px 4px #000;
+	border: 4px white outset;
+	height: 180px;
+	width: 800px;
+	position: relative;
+	top:20px;
+	left: 20px;
+	
+	/*Fondos*/
+	background-image: url('./Imagenes/fondof.jpg');
+	background-color: #f00;
+	
+	/*Texto*/
+	color: white;
+}
+
+/*Escondemos los textos de las cabeceras, y alineamos el abbr "Cascading Style Sheets" con la imagen*/
+
+h1{
+	display: none;
+}
+
+h2{
+	visibility: hidden;
+}
+
+h2 abbr{
+	/*Modelo de caja y Posicionamiento*/
+	position: relative;
+	left:462px;
+	top: 75px;
+
+	/*Visibilidad*/
+	visibility: visible;
+	opacity: 0;
+	
+
+	/*Texto*/
+	font-size: 1.3em;
+	text-transform: uppercase;
+	font-style: italic;
+
+}
+
+/*-------------Summary---------------*/
+/*Utilizo el summary para la bandera italiana repetida en eje Y. Los enlaces del CSS y HTML se recuperan para ser
+colocados en un sitio distinto de la página.*/
+.summary{
+
+	/*Modelo y Posicionamiento*/
+	width: 178px;
+	position: absolute;
+	top: 300px;
+	left: 20px;
+	border: 2px #333 solid;
+	height: 2840px;
+	border-radius: 0px 0px 5px 5px;
+	box-shadow: -5px 5px 15px 1px black;
+
+	/*Fondo*/
+	background-color: transparent; 
+	background-image:url("./Imagenes/italia.png");
+	}
+
+
+.summary p{
+	/*Visibilidad: Escondemos los párrafos*/
+	visibility: hidden;
+}
+
+.summary p a{
+	/* Modelo de cajas y posicionamiento */
+	position: absolute;
+	bottom: 2960px;
+	left: 180px;
+	width: 90px;
+	padding-left: 30px;
+	border-radius: 20px;
+
+	/*Fondo*/
+	background-color: #ddd;
+	background-image: url("./Imagenes/html.gif"); 
+	background-repeat: no-repeat;
+	background-position: 5px 0px;
+
+	/*Visibilidad*/
+	visibility: visible;
+	display: block;
+	z-index: 2;
+	
+	/*Texto*/
+	color: #B50909;
+	text-transform: uppercase;
+	text-decoration: none;
+
+	/*Transiciones*/
+	-webkit-transition: all 0.6s ease-in-out;    ç
+	-moz-transition: all 0.6s ease-in-out;
+	-o-transition: all 0.6s ease-in-out;
+	-ms-transition: all 0.6s ease-in-out;
+	transition: all 0.6s ease-in-out;
+	
+}
+
+.summary p a:nth-child(2){
+	/*Posicionamiento: Un poco mas a la izquierda del archivo HTML*/
+	left: 30px;
+	/*Fondo*/
+	background-image: url("./Imagenes/file-css.png");
+}
+
+.summary p a:hover{
+	background-color: #B50909;
+	color: #fff;
+}
+
+/*------------Preamble-----------*/
+/*El preamble está colocado como primer artículo de la página. Los tamaños se definen mas adelante, en un selector combinado*/
+
+div.preamble{
+	/*Modelo de caja*/
+	border: 3px solid white;
+	border-bottom: 0px;
+	height: 550px;
+	
+	/*Posicionamiento*/
+	position: relative;
+	top:22px;
+
+	/*Fondo*/
+	background-image:url("./Imagenes/articulo1.jpg");
+	background-repeat: no-repeat;
+	background-size: 620px 293px;
+	background-position: 0px 0px;
+}
+
+div.preamble:hover{
+	/*Fondo*/
+	background-size: 640px 300px;
+	background-position: -15px -7px;
+}
+
+
+/*--------------Barra lateral--------------*/
+/*Se opta por un menú desplegable, cuyas sublistas se extienden hacia abajo, empujando al resto de botones si hace falta.
+ Si bien su manejo puede hacerse un poco engorroso, el resultado a nivel visual me pareció mas atractivo que apartarlo del flujo.
+ En Firefox hay un error en las transiciones al pasar del segundo botón al primero, algo bastante curioso y que no
+ se produce en el resto de navegadores que he probado.*/
+
+aside{
+	/*Fondo*/
+	background-image: -webkit-linear-gradient(top, #B50909, #610F0F);
+	background-image: -moz-linear-gradient(top, #B50909, #610F0F);
+	background-image: -o-linear-gradient(top, #B50909, #610F0F);
+	background-image: linear-gradient(top, #B50909, #610F0F);
+	background-image: -ms-linear-gradient(top, #B50909, #550909);
+	background-color: #B50909;
+
+}
+
+/*Botones Cabecera*/
+aside div.wrapper h3{
+	/*Texto*/
+	font-size: 0.8em;
+	font-family:arial black, sans-serif; 
+	text-align: center;
+	text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+	color: #FFFFFF;
+
+	/*Modelo de caja*/
+	border:1px solid #FFFFFF; 
+	padding: 15px 20px 15px 30px; 
+	display: block;
+	margin: 0px;
+	font-weight:bold; 
+	border-bottom: 2px white outset;
+	width: 128px;
+
+	/*Transiciones: El color del texto cambia*/
+	-webkit-transition: color 0.6s ease-in-out;    
+	-moz-transition: color 0.6s ease-in-out;
+	-o-transition: color 0.6s ease-in-out;
+	-ms-transition: color 0.6s ease-in-out;
+	transition: color 0.6s ease-in-out;
+
+	/*Fondos*/
+	background-color: #B50909;
+	background-image: url("./imagenes/boton.png");
+	background-size: 100% 100%;
+	 /*Posicionamiento*/
+	 float: left;
+	 
+}
+
+aside div.zen-resources h3, aside div.zen-resources ul{
+/*Modelo de caja*/
+border-radius:0px 0px 20px 0px;
+
+}
+
+/*Botones Cabecera: HOVER*/
+aside div.wrapper div:hover h3{
+
+	 /*Fondos*/
+	 background-color: #FFF7F8; 
+	 background-image: url("./Imagenes/Boton2.png");
+	 
+	 /*Texto*/
+	 color: #B50909;
+
+}
+
+/*Listas desordenadas*/
+div.wrapper{
+	/*Texto*/
+	font-size: 0.8em;
+	
+	/*Modelo de caja*/
+	border: 2px white outset;
+	box-shadow: -5px 5px 15px 1px black;
+	cursor: pointer;
+	width: 178px;
+	border-radius:0px 0px 20px 0px;
+
+	/*Fondo*/
+	background-color: #B50909;
+	
+	/*Posicionamiento*/
+	position: absolute;
+	left: 20px;
+	top:210px;
+	
+}
+
+aside div.wrapper ul {
+	
+	/*Posición*/
+	float: left;
+	overflow: hidden;
+    
+    /*Modelo de caja*/
+	margin: 0;
+	padding: 0;
+    width: 178px;
+    max-height:0;
+    min-height:0;
+    
+	/*Fondo*/
+	background-color: #610F0F; 
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#f62b2b), to(#d20202));
+	background-image: -webkit-linear-gradient(top, #B50909, #610F0F);
+	background-image: -moz-linear-gradient(top, #B50909, #610F0F);
+	background-image: -ms-linear-gradient(top, #B50909, #610F0F);
+
+
+	/*Transiciones: Altura máxima */
+	-moz-transition: max-height 1s ease-out .1s;
+    -webkit-transition: max-height 1s ease-out .1s;
+    -o-transition: max-height 1s ease-out .1s;
+    -ms-transition: max-height 1s ease-out .1s;
+    transition: max-height 1s ease-out .1s;
+}
+
+aside div.wrapper div:hover ul, aside div.wrapper div:hover nav{
+  /*Modelo de caja. Se despliega en HOVER*/
+  max-height: 700px;
+
+}
+
+/*Botones Submenú*/
+aside div.wrapper ul li{
+	
+	/*Modelo de caja*/
+	display: block;
+	width: 20px;
+	margin: 5px 0px;
+	padding:2px;
+	padding-left: 10px;
+	
+	/*Texto*/
+	font-size: 0.6em;
+	color: #fff;
+	font-family:arial black, sans-serif; 
+   
+    /*Posicionamiento*/
+   	position: relative;
+   	 -moz-transition: padding-left .3s ease-in;
+     -o-transition: padding-left  .3s ease-in;
+     -webkit-transition: padding-left  .3s ease-in;
+     transition: padding-left  .3s ease-in;
+   }
+
+/*Botones submenú en HOVER*/
+aside div.wrapper ul li:hover{
+	/*Fondo*/
+	background-color: #000;
+	background-image: url("./Imagenes/Flecha.png");
+	background-position: 3px center;
+	background-repeat: no-repeat;
+	background-size: 10px 10px;
+
+	/*Modelo de caja*/
+	padding-left: 20px;
+}
+
+/*Enlaces en los submenús*/
+aside div.wrapper ul li a{
+	/*Texto*/
+	text-transform: capitalize;
+	font-size: 1.1em;
+}
+
+aside div.wrapper ul li:hover a:hover{
+	/*Texto*/
+	color: #B50909;
+}
+
+/*Enlaces sin visitar*/
+aside div.wrapper ul li a:link{
+	/*Texto*/
+	color:#fff;
+	
+}
+/*Enlaces visitados*/
+aside div.wrapper ul li a:visited{
+	/*Texto*/
+	color:#aaa;
+	
+}
+
+/*---------------------Artículos----------------------*/
+/*Se opta por un diseño sencillo, en donde cada artículo se encuentra uno debajo del otro. Los titulares de cada uno de ellos
+marcan el límite de inicio y/o fin de cada uno.*/
+#zen-supporting{
+	/*Posicionamiento*/
+	position: relative;
+
+	/*Modelo de caja*/
+	border: solid 3px white;
+	border-top: 0px solid white;
+	
+}
+div.preamble, div#zen-supporting div[role="article"]{
+	
+	/*Fondos*/
+	background-color: #990909;
+	
+	/*Transiciones: Color de fondo*/
+	-moz-transition: background-color 0.5s ease-in 0s;
+	-ms-transition: background-color 0.5s ease-in 0s;
+	-o-transition: background-size 0.5s ease-in 0s;
+	-webkit-transition: background-color 0.5s ease-in 0s;
+
+	/*Modelo de caja y Posicion*/
+	position: relative;
+	overflow: hidden;
+	padding-bottom: 20px;
+
+	/*Texto*/
+	font-size: 1em;
+	color: #fff;
+	text-align: justify;
+	
+}
+
+/*El color de fondo se cambia en Hover*/
+div#zen-supporting div[role="article"]:hover, div.preamble:hover{
+	/*Fondo*/
+	background-color:  #610F0F;
+
+}
+
+/*Marcamos estilos para los párrafos y enlaces de los artículos*/
+/*Enlaces*/
+div#zen-supporting div[role="article"] p a{
+	/*Texto*/
+	color: #fff;
+}
+
+/*Primera letra*/
+div#zen-supporting  div[role="article"] p:nth-child(2):first-letter, div.preamble p:nth-child(2):first-letter{
+	/*Texto*/
+	font-size: 2em;
+}
+
+/*Limito de alguna manera el desbordamiento de los párrafos en Chrome*/
+div[role="article"] p{
+	/*Modelos de caja*/
+	max-height: 180px;
+	overflow: hidden;
+} 
+
+/*Titulos Artículos*/
+div[role="article"] h3{
+	/*Texto*/
+	color:#f00;
+	text-align: left;
+	text-transform: uppercase;
+	font-family: verdana;
+	font-size: 1em;
+	text-shadow: 3px 3px #999999;
+	font-weight: bold;
+
+	/*Fondo*/	
+	background-image: -webkit-linear-gradient(left, #ffffff, #610F0F);
+	background-image: -moz-linear-gradient(left, #ffffff, #610F0F);
+	background-image: -o-linear-gradient(left, #ffffff, #610F0F);
+	background-image: linear-gradient(left, #ffffff, #610F0F);
+	background-image: -ms-linear-gradient(left, #ffffff, #610F0F);
+	background-color: #ffffff;
+
+
+	/*Posicion y modelo de caja*/
+	position: relative;
+	top:0;
+	height: 35px;
+	margin: 0px 0px 20px 0px;
+	
+}
+
+/*------------Articulos 1x1----------*/
+/*Se definen las imágenesde fondo y las dimesiones de cada artículo individualmente. Había optado por una animación
+en la imagen de fondo al hacer HOVER que quedaba de maravilla, pero tuve que quitarla porque al hacer zoom, chrome se 
+volvía loco. Aun así, las imagenes se redimensionan al hacer hover, pero de manera inmediata.*/
+
+/*Clase Explanation*/
+div.explanation{
+	/*Modelo*/
+	height: 570px;
+	
+	/*Fondo*/
+	background-image: url("./Imagenes/scuderia.jpg");
+	background-repeat: no-repeat;
+	background-position: 0px -70px;
+	background-size: 620px 356px;
+}
+
+/*Clase Explanation: HOVER*/
+div.explanation:hover{
+	/*Fondo*/
+	background-position: -15px -80px;
+	background-size: 640px 366px;
+}
+
+/*Clase Participation*/
+div.participation{
+	/*Modelo*/
+	height: 640px;
+	
+	/*Fondo*/
+	background-image: url("./Imagenes/Presentacion.jpg");
+	background-repeat: no-repeat;
+	background-position: 0px  30px;
+	background-size: 618px 260px;
+
+}
+
+/*Clase Participation: HOVER*/
+div.participation:hover{
+	/*Fondo*/
+	background-position: -15px  20px;
+	background-size: 638px 270px;
+
+}
+
+
+/*Clase Benefits*/
+div.benefits{
+	/*Modelo*/
+	height: 410px;
+	
+	/*Fondo*/
+	background-image:url("./Imagenes/ferrari noct.jpg");
+	background-repeat: no-repeat;
+	background-size: 690px 294px;
+	background-position:  -70px -15px;
+}
+
+/*Clase Benefits: HOVER*/
+div.benefits:hover{
+	/*Fondo*/
+	background-size: 710px 304px;
+	background-position:  -85px -25px;
+}
+
+/*Clase Requirements*/
+div.requirements{
+	/*Modelo*/
+	height: 680px;
+
+	/*Fondo*/
+	background-image: url("./Imagenes/FerrariLogo.png");
+	background-repeat: no-repeat;
+	background-position: 130px 170px;
+}
+
+/*Los párrafos de debajo de la imagen los movemos de manera que no se superpongan a ella*/
+div.requirements p:nth-child(3), div.requirements p:nth-child(4), div.requirements p:nth-child(5), div.requirements p:nth-child(6){
+	/*Posicionamiento*/
+	position: relative;
+	top: 80px;
+}
+
+/*---------------------Footer--------------------*/
+footer{
+	/*Modelo*/
+	width: 300px;
+	padding: 20px 0;
+	padding-left: 50px;
+	
+	/*Fondo*/
+	background-image: url("./Imagenes/F1Logo.png");
+	background-repeat: no-repeat;
+	background-color: transparent;
+	background-position: left;
+
+	/*Posicionamiento*/
+	position: absolute;
+	left:100px;
+	
+	/*Texto*/
+	word-spacing: 6px;
+	font-size: 1.1em;
+	font-family: arial;
+	font-weight: bold;
+
+}
+
+footer a:link{
+	color:#fff;
+	
+}
+
+footer a:visited{
+	color:#aaa;
+}
+
+footer a:hover{
+	color:#a00;
+}
+
+
+
+/* -----------------Selectores Combinados----------*/
+
+/*Aplicamos sombreado, posicion y anchos al primer articulo y al contenedor del resto*/
+div.preamble, div#zen-supporting{
+	/*Modelo y posicionamiento*/
+	width: 618px;
+	left:204px;
+	box-shadow: 2px 5px 10px 3px black;
+}
+
+/*Texto de los articulos*/
+div#zen-supporting div[role="article"] p , div.preamble p, div.summary a{
+	/*Texto*/
+	line-height: 1.5em;
+	font-family: consolas;
+	font-weight: bold;
+	font-size: 0.8em;
+	word-spacing: 0.1em;
+
+}
+
+/*Texto primer párrafo en los artículos*/
+div#zen-supporting div[role="article"] p:nth-child(2), div.preamble p:nth-child(2){
+	/*Texto*/
+	text-indent: 10px;
+	font-size: 0.8em;
+	text-transform: uppercase;
+	
+	/*Modelo de caja*/
+	margin: 0px 10px 20px 10px;
+ 	
+ }
+
+/*Margen de los parrafos en articulos*/
+div#zen-supporting div[role="article"] p, div.preamble p{
+	margin: 0 10px 20px 50px;
+}
+
+/*Tiro todos los párrafos hacia abajo para dar hueco a la imagen del principio*/
+div.preamble p, div.explanation p, div.benefits p, div.participation p{
+	position: relative;
+	top: 260px;
+}
+
+
+
