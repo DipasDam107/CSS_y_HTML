@@ -1,0 +1,195 @@
+
+/*Posicionamiento flotante
+----------------------------
+Cuando una caja se convierte en flotante se desplaza hasta la zona mas izquierda o
+derecha de la que se encontraba. La caja deja de pertenecer al flujo normal de 
+la página, con lo cual el resto de elementos ocupan su lugar. En caso de existir
+varias cajas flotantes, se tiene en cuenta el espacio disponible, situandose una
+al lado de la otra.
+
+Float: [right|left];
+
+Clear
+-----------------------------
+Permite modificar el comportamiento del posicionamiento flotante para forzar a 
+un elemento a mostrarse debajo de cualquier caja flotante.
+
+Clear: [left|right|both|none|inherit];
+
+Dependiendo del lado que indiquemos el elemento se situará debajo del elemento flotante 
+en la izquierda, en la derecha o en ambos.
+
+
+Display
+-----------------------------
+Permite ocultar completamente un elemento haciendo que desaparezca de la pagina. El resto
+de los elementos ocupa su lugar.
+
+display: [block|inline|none|inline-block....];
+
+Display modifica la forma en la que se visualiza un elemento. BLock muestra el elemento
+como si fuera de bloque, inline en forma de elemento de linea, none desaparece el elemento
+de la página
+
+Visibility
+-----------------------------
+Permite hacer invisible un elemento, con lo cual el navegador crea una caja pero
+no la muestra. El resto de elementos no modifican su posición ya que la caja sigue
+ocupando su sitio aunque no se vea.
+
+visibility:[hidden|visible|collapse|inherit];
+
+
+Overflow
+-----------------------------
+En caso de que un contenido no quepa en el elemento, ya que hemos establecido un 
+ancho y un alto para el elemento se define overflow, con el fin de controlar la manera en
+que sobresale el desbordamiento
+
+[overflow: visible|hidden|scroll|auto|inherit]
+
+	*visible: El contenido no se corta, sobresaliendo de la zona reservada para el elemento;
+	*hidden: El elemento que sobresale se oculta y solo se ve lo que está dentro;
+	*scroll: Se ve lo que cabe dentro de la zona reservada y barras de scroll que permiten
+	ver el resto del contenido;
+	*auto: Comportamiento que depende del navegador, suele ser scroll;
+
+z-index
+-------------------------------
+Permite controlar la posicion tridimensional de las cajas posicionadas, de manera que 
+es posible indicar que cajas se posicionan delante o detras de otras. 
+
+z-index: auto|numero|inherit;
+
+Cuanto mas alto sea el valor numerico mas cerca del usuario se muestra la caja
+*/
+
+
+.contenedora{
+background-image: url("fondo.jpg");
+background-repeat: repeat;
+width: 640px; /*Modificar la propiedad cambia completamente el flujo de la pagina*/
+position: relative;
+/*visibility:hidden*/
+/*height: 200px;
+overflow: scroll;*/
+}
+
+/*Menu desplegable*/
+.mostrar{
+	background-color: red;
+	height: 20px;
+	width: 60px;
+	background-image: url("fondo.jpg");
+	background-repeat: repeat;
+	border-bottom: 1px gray solid; 
+}
+
+/*.mostrar:hover + .contenedora{
+	display: block;
+	position: absolute;
+	z-index: 200;
+	visibility:visible
+}
+
+.contenedora:hover{
+	display: block;
+	position: absolute;
+	z-index: 200;
+	/*visibility:visible
+}*/
+h1 a{
+	text-decoration: none;
+	color: inherit;
+}
+
+.bloque{
+width:140px;
+height:70px;
+margin: 10px;
+margin-right: 5px;
+font-size: 1em;
+float:left;
+}
+
+.imagen{
+float:left;
+max-width: 40px;
+max-height: 40px;
+margin-right: 5px;
+}
+
+.titulo{
+float:left;
+width:90px;
+font-size: 80%;
+font-weight: bold;
+font-family: verdana;
+color: rgb(110,110,110);
+height: 30px;
+}
+
+.texto{
+float: left;
+font-size:70%;
+border-top: 1px gray solid;
+color: rgb(150,150,150);
+display:block;
+}
+
+.clear{
+	clear: both;
+}
+
+
+.primero{
+	position: absolute;
+	top: 20px;
+	left:20px;
+	height: 100px;
+	width: 200px;
+	z-index: 10;
+	background-color: red;
+	opacity: 0.7;
+
+}
+
+.segundo{
+	position: absolute;
+	top: 40px;
+	left:40px;
+	height: 100px;
+	width: 200px;
+	z-index: 20;
+	background-color: yellow;
+	opacity: 0.7;
+
+}
+
+.tercero{
+	position: absolute;
+	top: 60px;
+	left:60px;
+	height: 100px;
+	width: 200px;
+	z-index: 30;
+	background-color: gray;
+	opacity: 0.7;
+	/*box-shadow: 5px 5px 20px #111;*/
+}
+
+.contain{
+	position: relative;
+}
+
+.segundo:hover{
+	z-index: 100;
+}
+
+.primero:hover{
+	z-index: 100;
+}
+
+.tercero:hover{
+	z-index: 100;
+}
